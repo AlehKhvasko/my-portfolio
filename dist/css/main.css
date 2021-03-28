@@ -99,7 +99,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background-image: url("../../img/Baby-Yoda-Force.jpg");
+      background-image: url("https://media.giphy.com/media/KziKCpvrGngHbYjaUF/giphy.gif");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -109,6 +109,35 @@
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transform: translate3d(600px, 0, 0);
+    -moz-transform: translate3d(600px, 0, 0);
+    -ms-transform: translate3d(600px, 0, 0);
+    -o-transform: translate3d(600px, 0, 0); }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0); }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
 
 body {
   background: #3f3d3d;

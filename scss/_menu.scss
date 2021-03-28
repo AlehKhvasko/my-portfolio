@@ -109,7 +109,7 @@
         .portrait {
             width:250px;
             height:250px;
-            background-image:url('../../img/Baby-Yoda-Force.jpg');
+            background-image:url('https://media.giphy.com/media/KziKCpvrGngHbYjaUF/giphy.gif');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -120,5 +120,33 @@
             -ms-border-radius:50%;
             -o-border-radius:50%;
         }   
+    }
+
+    .nav-item {
+        transform:translate3d(600px,0,0);
+        @include easeOut;
+        -webkit-transform:translate3d(600px,0,0);
+        -moz-transform:translate3d(600px,0,0);
+        -ms-transform:translate3d(600px,0,0);
+        -o-transform:translate3d(600px,0,0);
+        &.show {
+            //Slide in front right
+            transform:translate3d(0,0,0);
+            -webkit-transform:translate3d(0,0,0);
+            -moz-transform:translate3d(0,0,0);
+            -ms-transform:translate3d(0,0,0);
+            -o-transform:translate3d(0,0,0);
+        }
+    }
+
+    .nav-link {
+        
+    }
+}
+
+// Delay each nav item by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}){
+        transition-delay:$x * 0.1s
     }
 }
