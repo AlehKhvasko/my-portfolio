@@ -23,6 +23,26 @@
     -moz-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45%) translate(5px, 5px);
+      -webkit-transform: rotate(45%) translate(5px, 5px);
+      -moz-transform: rotate(45%) translate(5px, 5px);
+      -ms-transform: rotate(45%) translate(5px, 5px);
+      -o-transform: rotate(45%) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45%) translate(7px, -6px);
+      -webkit-transform: rotate(-45%) translate(7px, -6px);
+      -moz-transform: rotate(-45%) translate(7px, -6px);
+      -ms-transform: rotate(-45%) translate(7px, -6px);
+      -o-transform: rotate(-45%) translate(7px, -6px); }
 
 body {
   background: #3f3d3d;

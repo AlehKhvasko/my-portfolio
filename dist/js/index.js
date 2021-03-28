@@ -19,7 +19,7 @@ function toggleMenu() {
         navItems.forEach((item)=>{
             item.classList.add('show')
         });
-        show.menu = true;
+        showMenu = true;
     } else {
         menuBtn.classList.remove('close');
         menu.classList.remove('show');
@@ -28,6 +28,6 @@ function toggleMenu() {
         navItems.forEach((item)=>{
             item.classList.remove('show')
         });
-        show.menu = false;
+        showMenu = false;
     }
 }
