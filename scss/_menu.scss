@@ -1,6 +1,6 @@
 
 // Menu button
-.menu_btn {
+.menu-btn {
     position: absolute;
     z-index: 3;
     right: 35px;
@@ -14,5 +14,158 @@
         margin:0 0 5px 0;
         background: #fff;
         @include easeOut; 
+    }
+
+    // Rotate Burger menu
+    &.close {
+        transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        -moz-transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -o-transform:rotate(180deg);
+
+        .btn-line {
+            // Line 1 - Rotate
+            &:nth-child(1) {
+                transform:rotate(45deg) translate(5px,5px)            ;
+                -webkit-transform:rotate(45deg) translate(5px,5px)            ;
+                -moz-transform:rotate(45deg) translate(5px,5px)            ;
+                -ms-transform:rotate(45deg) translate(5px,5px)            ;
+                -o-transform:rotate(45deg) translate(5px,5px)            ;
+}
+            // Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform:rotate(-45deg) translate(7px,-6px)            ;
+                -webkit-transform:rotate(-45deg) translate(7px,-6px)            ;
+                -moz-transform:rotate(-45deg) translate(7px,-6px)            ;
+                -ms-transform:rotate(-45deg) translate(7px,-6px)            ;
+                -o-transform:rotate(-45deg) translate(7px,-6px)            ;
+}
+        }
+    }
+}
+
+// Menu Overlay
+.menu {
+    position:fixed;
+    top: 0;
+    width:100%;
+    // opacity:0.9;
+    visibility: hidden;
+
+    &.show {
+        visibility:visible;
+    }
+
+
+    &-nav,&-branding {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float:left;
+        width: 50%;
+        height:100vh;
+        overflow: hidden;
+        background: rgba(darken($primary-color, 5), 0.9);
+    }&-branding {
+        background: rgba($primary-color, 0.9);
+    }
+
+    &-nav {
+        margin:0;
+        padding: 0;
+        background:darken($color:$primary-color,$amount: 5);
+        list-style:none;
+        transform:translate3d() ;
+        -webkit-transform:translate3d(0,-100%,0);
+        @include easeOut;
+        -moz-transform:translate3d() ;
+        -ms-transform:translate3d() ;
+        -o-transform:translate3d() ;
+
+        &.show {
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+        }
+    }
+    &-branding {
+        background:darken($color:$primary-color,$amount: 1);
+        transform:translate3d(0,100%,0);
+        
+        @include easeOut;
+        // Sliding from bottom
+        &.show {
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+        }
+        .portrait {
+            width:250px;
+            height:250px;
+            background-image:url('https://media.giphy.com/media/KziKCpvrGngHbYjaUF/giphy.gif');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border:solid 3px $secondary-color;
+            border-radius:50%;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            -o-border-radius:50%;
+        }   
+    }
+
+    .nav-item {
+        transform:translate3d(600px,0,0);
+        @include easeOut;
+        -webkit-transform:translate3d(600px,0,0);
+        -moz-transform:translate3d(600px,0,0);
+        -ms-transform:translate3d(600px,0,0);
+        -o-transform:translate3d(600px,0,0);
+        &.show {
+            //Slide in front right
+            transform:translate3d(0,0,0);
+            -webkit-transform:translate3d(0,0,0);
+            -moz-transform:translate3d(0,0,0);
+            -ms-transform:translate3d(0,0,0);
+            -o-transform:translate3d(0,0,0);
+        }
+        &.current > a {
+            color:$secondary-color;
+        }
+    }
+    
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: capitalize;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+        
+        &:hover {
+            color:$secondary-color
+        }
+    }
+}
+
+// Delay each nav item by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}){
+        transition-delay:$x * 0.1s
     }
 }
