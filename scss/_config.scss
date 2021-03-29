@@ -1,6 +1,6 @@
 // Colors:
-$primary-color:rgb(63, 61, 61);
-$secondary-color:rgb(218, 199, 31);
+$primary-color:rgb(37, 33, 33);
+$secondary-color:rgb(180, 72, 21);
 $background-opacity:0.65;
 $show-home-image: true;
 $home-image:url('../../img/grogu_background.jpg');
@@ -36,5 +36,28 @@ $home-image:url('../../img/grogu_background.jpg');
                 background:rgba($primary-color, $background-opacity) ;
             }
         }  
+    }
+}
+
+// Media Query Mixins
+@mixin mediaSm{
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd{
+    @media screen and (max-width:700px) {
+        @content;
+    }
+}
+@mixin mediaLg{
+    @media screen and(min-width:769px) and(max-width:1170px) {
+        @content;
+    }
+}
+@mixin mediaXl{
+    @media screen and (max-width:1171px) {
+        @content;
     }
 }

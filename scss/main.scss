@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 body {
     @include background;
@@ -21,7 +22,7 @@ h1,h2,h3 {
     }
 
     &.sm-heading {
-        margin-bottom: 2rem;
+        margin: 4rem 0;
         padding: 0,2rem 1rem;
         background-color: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
     }
@@ -43,11 +44,11 @@ header {
 }
 
 main {
-    padding: 4rem;
+    padding: 3rem;
     height: 100%;
 
     .icons {
-        margin-top: 1rem;
+        margin-top: 2rem;
 
         a {
             padding: .5rem;
