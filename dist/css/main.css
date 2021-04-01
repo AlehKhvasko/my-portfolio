@@ -249,12 +249,63 @@ main {
     padding: 0.5rem;
     border-bottom: #b4d61e 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #b4d61e;
+      transition: all 0.5s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem; }
+
+.btn, .btn-dark, .btn-light {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #b4d61e;
+    color: #fff; }
+
+.btn-dark {
+  background: black; }
+
+.btn-light {
+  background: #8295ca; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #080a12;
   color: #fff;
-  height: 60px; }
+  height: 60px;
+  width: 100%; }
+
+@media screen and (max-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 700px) {
   main {
@@ -294,10 +345,14 @@ main {
       background: url("../../img/Baby-Yoda-Force.png");
       width: 150px;
       height: 150px; }
+    .menu-branding .projects {
+      grid-template-columns: repeat(2, 1fr); }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
