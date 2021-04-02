@@ -1,6 +1,9 @@
 @import 'config';
 @import 'menu';
 
+*{
+    box-sizing:border-box;
+}
 
 body {
     @include background;
@@ -159,10 +162,12 @@ main {
 .btn-dark {
     @extend .btn;
     background: darken($primary-color,50);
+    color: #fff;
 }
 .btn-light {
     @extend .btn;
     background: lighten($primary-color,50);
+    color: #333;
 }
 
 #main-footer {
@@ -171,7 +176,6 @@ main {
     background: darken($primary-color,10);
     color:set-text-color($primary-color);
     height:60px;
-    width:100%;
 }
 
 @import 'mobile';

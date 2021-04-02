@@ -6,9 +6,7 @@ $show-home-image: true;
 $home-image:url('https://www.computerfutures.com/media/3313/close-up-back-rear-behind-photo-stubble-handsome-he-him-his-guy-pensive-hands-arms-chin-coder-code-development-outsource-it-processing-two-monitors-table-office-wear-specs-formalwear-plaid-shirt.jpg?anchor=center&mode=crop&width=1920&height=640&rnd=132430753850000000');
 //Google fonts:
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-*{
-    box-sizing:border-box;
-}
+
 // Functions:
 @mixin easeOut {
     transition: all 0.5s ease-out;
